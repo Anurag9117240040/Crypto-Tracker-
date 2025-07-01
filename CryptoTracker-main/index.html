@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="app.css">
+    <title>Crypto Tracker</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+        <a class="navbar-brand d-flex align-items-center" href="#home">
+            <span style="font-weight: bold; font-size: 1.3em;">Crypto Tracker</span>
+        </a>
+    
+    </header>
+    <!-- End Header -->
+    
+    <!-- Home Section -->
+    <section id="home" class="jumbotron text-center bg-warning mb-4" style="border-radius: 10px; position:relative; overflow:hidden;">
+        <div class="row align-items-center">
+            <div class="col-md-7 text-left">
+                <h1 class="display-4" style="color: #fff; font-weight: bold;">Track Crypto Prices Instantly</h1>
+                <p class="lead" style="color:#fff;">Get real-time prices, market cap, and more for your favorite cryptocurrencies. Stay ahead in the crypto world!</p>
+                <a href="#observation" class="btn btn-dark btn-lg mt-2">Get Started</a>
+            </div>
+        </div>
+    </section>
+    <!-- End Home Section -->
+
+    <!-- About Section -->
+    <section id="about" class="container mb-5 py-4" style="background: #fffbe6; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+        <div class="row align-items-center">
+            <div class="col-md-4 text-center mb-3 mb-md-0">
+                <img src="bitcoin.png" alt="About Crypto" style="width: 150px; height: 150px;">
+                
+            </div>
+            <div class="col-md-8">
+                <h2 style="color:#ff512f; font-weight: bold;">About Crypto Tracker</h2>
+                <p style="font-size:1.1em; color:#333;">Crypto Tracker is a simple website that helps you check the latest prices and details for popular cryptocurrencies. Just pick a coin and see its current price, market cap, and more—all updated in real time. Whether you are new to crypto or just want quick info, this site makes it easy to stay up to date.</p>
+            </div>
+        </div>
+    </section>
+    <!-- End About Section -->
+
+    <!-- Real-Time Observation Section -->
+    <section id="observation" class="container mb-5 py-4" style="background: #f8f9fa; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+        <h2 class="text-center mb-4" style="color:#ff512f; font-weight: bold;">
+           Real-Time Observation
+        </h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8 col-12">
+                <form action="" id="searchForm">
+                    <div class="form-row">
+                        <div class="col-12 form-group">
+                            <label for="coin">
+                                <span style="font-weight: 700; color: #ff512f;">Coin type</span>
+                            </label>
+                            <select class="form-control" name="coinType" id="coin">
+                                <option value="bitcoin">Bitcoin</option>
+                                <option value="ethereum">Ethereum</option>
+                                <option value="dogecoin">Dogecoin</option>
+                                <option value="polkadot">Polkadot</option>
+                                <option value="tether">Tether</option>
+                                <option value="solana">Solana</option>
+                                <option value="cardano">Cardano</option>
+                                <option value="ripple">XRP</option>
+                                <option value="litecoin">Litecoin</option>
+                                <option value="shiba-inu">Shiba Inu</option>
+                                <option value="avalanche-2">Avalanche</option>
+                                <option value="tron">Tron</option>
+                                <option value="polygon">Polygon</option>
+                                <option value="uniswap">Uniswap</option>
+                                <option value="chainlink">Chainlink</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="col-12 btn btn-primary ">Get Price</button>
+                </form>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-4">
+            <div class="col-lg-8 col-md-10 col-12">
+                <div class="text-center" id="result">
+                    <table class="p-4 w-100" border="1px" style="background-color: white; font-weight: 700;" id="resTable">
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Real-Time Observation Section -->
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light text-center py-3 mt-5" style="border-radius: 18px 18px 0 0; background: linear-gradient(90deg, #ff512f 0%, #dd2476 100%) !important;">
+        <div class="container">
+            <div class="mb-2">
+                <a href="https://twitter.com/" target="_blank" class="mx-2 text-warning"><i class="fab fa-twitter fa-lg"></i></a>
+                <a href="https://github.com/" target="_blank" class="mx-2 text-warning"><i class="fab fa-github fa-lg"></i></a>
+                <a href="https://linkedin.com/" target="_blank" class="mx-2 text-warning"><i class="fab fa-linkedin fa-lg"></i></a>
+                <a href="https://t.me/" target="_blank" class="mx-2 text-warning"><i class="fab fa-telegram fa-lg"></i></a>
+                <a href="https://discord.com/" target="_blank" class="mx-2 text-warning"><i class="fab fa-discord fa-lg"></i></a>
+                <a href="mailto:info@cryptotracker.com" class="mx-2 text-warning"><i class="fas fa-envelope fa-lg"></i></a>
+            </div>
+            <div style="font-size:1.1em; font-weight:500;">Your gateway to real-time crypto insights. Powered by CoinGecko.</div>
+            <div style="font-size:0.95em;">&copy; 2024 Crypto Tracker by Anurag Gupta. All rights reserved.</div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/4e8e8e4e8e.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
