@@ -7,20 +7,26 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="app.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Manufacturing+Consent&display=swap" rel="stylesheet">
     <title>Crypto Tracker</title>
 </head>
 <body>
+
+
     <!-- Header -->
-    <header class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark mb-4 fade-in">
         <a class="navbar-brand d-flex align-items-center" href="#home">
-            <span style="font-weight: bold; font-size: 1.3em;">Crypto Tracker</span>
+            <span style=" font-size: 1.3em; font-family: 'Manufacturing Consent', system-ui;">Crypto Tracker</span>
         </a>
     
     </header>
     <!-- End Header -->
     
     <!-- Home Section -->
-    <section id="home" class="jumbotron text-center bg-warning mb-4" style="border-radius: 10px; position:relative; overflow:hidden;">
+    <section id="home" class="jumbotron text-center bg-warning mb-4 fade-in" style="border-radius: 10px; position:relative; overflow:hidden;">
         <div class="row align-items-center">
             <div class="col-md-7 text-left">
                 <h1 class="display-4" style="color: #fff; font-weight: bold;">Track Crypto Prices Instantly</h1>
@@ -32,7 +38,7 @@
     <!-- End Home Section -->
 
     <!-- About Section -->
-    <section id="about" class="container mb-5 py-4" style="background: #fffbe6; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+    <section id="about" class="container mb-5 py-4 fade-in" style="background: #fffbe6; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
         <div class="row align-items-center">
             <div class="col-md-4 text-center mb-3 mb-md-0">
                 <img src="bitcoin.png" alt="About Crypto" style="width: 150px; height: 150px;">
@@ -47,7 +53,7 @@
     <!-- End About Section -->
 
     <!-- Real-Time Observation Section -->
-    <section id="observation" class="container mb-5 py-4" style="background: #f8f9fa; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+    <section id="observation" class="container mb-5 py-4 fade-in" style="background: #f8f9fa; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
         <h2 class="text-center mb-4" style="color:#ff512f; font-weight: bold;">
            Real-Time Observation
         </h2>
@@ -60,25 +66,31 @@
                                 <span style="font-weight: 700; color: #ff512f;">Coin type</span>
                             </label>
                             <select class="form-control" name="coinType" id="coin">
-                                <option value="bitcoin">Bitcoin</option>
-                                <option value="ethereum">Ethereum</option>
-                                <option value="dogecoin">Dogecoin</option>
-                                <option value="polkadot">Polkadot</option>
-                                <option value="tether">Tether</option>
-                                <option value="solana">Solana</option>
-                                <option value="cardano">Cardano</option>
-                                <option value="ripple">XRP</option>
-                                <option value="litecoin">Litecoin</option>
-                                <option value="shiba-inu">Shiba Inu</option>
-                                <option value="avalanche-2">Avalanche</option>
-                                <option value="tron">Tron</option>
-                                <option value="polygon">Polygon</option>
-                                <option value="uniswap">Uniswap</option>
-                                <option value="chainlink">Chainlink</option>
+                                <option value="bitcoin">Bitcoin (BTC)</option>
+                                <option value="ethereum">Ethereum (ETH)</option>
+                                <option value="tether">Tether (USDT)</option>
+                                <option value="binancecoin">BNB (BNB)</option>
+                                <option value="solana">Solana (SOL)</option>
+                                <option value="usd-coin">USD Coin (USDC)</option>
+                                <option value="ripple">XRP (XRP)</option>
+                                <option value="dogecoin">Dogecoin (DOGE)</option>
+                                <option value="toncoin">Toncoin (TON)</option>
+                                <option value="cardano">Cardano (ADA)</option>
+                                <option value="shiba-inu">Shiba Inu (SHIB)</option>
+                                <option value="avalanche-2">Avalanche (AVAX)</option>
+                                <option value="tron">TRON (TRX)</option>
+                                <option value="polkadot">Polkadot (DOT)</option>
+                                <option value="chainlink">Chainlink (LINK)</option>
+                                <option value="polygon">Polygon (MATIC)</option>
+                                <option value="litecoin">Litecoin (LTC)</option>
+                                <option value="internet-computer">Internet Computer (ICP)</option>
+                                <option value="dai">Dai (DAI)</option>
+                                <option value="uniswap">Uniswap (UNI)</option>
                             </select>
                         </div>
                     </div>
                     <button type="submit" class="col-12 btn btn-primary ">Get Price</button>
+                    <button type="button" id="showChartBtn" class="col-12 btn btn-secondary mt-2">Show Chart</button>
                 </form>
             </div>
         </div>
@@ -86,7 +98,11 @@
             <div class="col-lg-8 col-md-10 col-12">
                 <div class="text-center" id="result">
                     <table class="p-4 w-100" border="1px" style="background-color: white; font-weight: 700;" id="resTable">
+                        <!-- Coin logo will be inserted by JS -->
                     </table>
+                </div>
+                <div id="chartContainer" class="mt-4" style="display:none;">
+                    <canvas id="coinChart" height="120"></canvas>
                 </div>
             </div>
         </div>
